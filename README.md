@@ -6,6 +6,8 @@ The checkpoint is quite consequent, it's no big deal if you don't do everything 
 
 # The checkpoint itself 🔥
 
+## :one: Step[0] - You can find all the hints you need here : https://github.com/ldupas/signup-login-middleware
+
 ## :one: Step[1] - Database modeling | 20 min
 
 We want to build a website that allows users to discover and share cooking recipes. Your mission here is to provide a **logical data model** that meets the following constraints for the application :
@@ -114,11 +116,6 @@ Here are some user stories about what you need to do:
 _Remember: for the tests to work properly, you need an `album` with id `1` and a track with id `1` in your DB !_
 
 ---
-
-## :three: Step[3] - Quiz | 10 min
-
-Your instructor will provide you the quiz link. You will need to login with Github in order to access it.  
-Once you have validated it, you can check your answers on your `profile` page :
 
 ## It's done ! Congrats !
 
