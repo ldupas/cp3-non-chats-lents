@@ -6,7 +6,7 @@ The checkpoint is quite consequent, it's no big deal if you don't do everything 
 
 # The checkpoint itself 🔥
 
-## :one: Step[0] - You can find all the hints you need here : https://github.com/ldupas/signup-login-middleware
+## 0️⃣: Step[0] - You can find all the hints you need here - Si vous avez besoin d'inspiration, regardez par ici : https://github.com/ldupas/signup-login-middleware
 
 ## :one: Step[1] - Database modeling | 20 min
 
