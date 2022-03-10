@@ -43,6 +43,8 @@ In the project directory, you can run different scripts:
 
 - `npm run dev` : Runs the app in the development mode using `nodemon` on port 8000 by default. You can change it by creating a `PORT` variable in your `.env` file. (You should create this file)
 - `npm start`: Runs the app in production mode. This will **not re-start when you write your code !**
+
+- !! Tu peux t'amuser a tester les commandes suivantes, mais attention, cela risque de modifier ton code et ce n'est pas le coeur du sujet !
 - `npm run lint` : This app came with basic ESLint config (Prettier + React), you can run a check every time using this script. :collision: BEWARE :collision: If you don't have Prettier installed in your Editor with format on save, you should run it with the next script
 - `npm run prettier` : It runs Prettier on all your staged files. (only useful if you don't have Prettier installed in your editor)
 - `npm test -runInBand` : This is the most important command for this checkpoint. It will test your CRUDs with `jest`. More informations below.
@@ -50,8 +52,6 @@ In the project directory, you can run different scripts:
 ---
 
 **In this step, you will create an API that allows you to manage songs and albums using Node/Express**
-
-_Please please, don't forget to make atomic commits with explicit messages_ :pray:
 
 Here is the database schema you need to create beforehand.  
 You can use either SQL database you like (MySQL, SQLite, Postgresql), but cannot use noSQL (MongoDB for example).
@@ -66,6 +66,8 @@ _don't write `albumId` instead of `id_album` for example_.
 
 ### Rules
 
+- Tu peux essayer d'aller plus loin dans ton checkpoint en implementant ces regles :
+
 - :white_check_mark: Response bodies should be JSON.
 - :white_check_mark: Request bodies should be JSON.
 - :white_check_mark: `PUT` and `DELETE` request should return `204 no content`.
@@ -75,6 +77,8 @@ _don't write `albumId` instead of `id_album` for example_.
 - :white_check_mark: All routes should starts with `/api`
 
 ### Tests
+
+- Un peu a la maniere d'un code wars, des tests d'integration sont prepares sur ce cp3. Si tu utilises ce repo pour travailler, n'hesite pas a tester ton code.
 
 This checkpoint comes with integration tests on most of the routes.
 
