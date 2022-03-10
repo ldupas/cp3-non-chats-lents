@@ -6,10 +6,6 @@ The checkpoint is quite consequent, it's no big deal if you don't do everything 
 
 # The checkpoint itself 🔥
 
-## :zero: Setup | 30 sec
-
-Before starting anything technical, your first mission is to clone this project, then create a branch with your lastname and firstname like so : `lastname_firstname`
-
 ## :one: Step[1] - Database modeling | 20 min
 
 We want to build a website that allows users to discover and share cooking recipes. Your mission here is to provide a **logical data model** that meets the following constraints for the application :
