@@ -5,9 +5,9 @@ const { trackToCreate, trackKeys } = require('./testsData');
 describe('🎧 TRACKS ROUTES', () => {
   const persistentDatas = {};
 
-  it('should get the track list 🧪 /api/tracks', async () => {
+  it('should get the track list 🧪 /api/track', async () => {
     const res = await supertest(app)
-      .get('/api/tracks')
+      .get('/api/track')
       .expect(200)
       .expect('Content-Type', /json/);
 
@@ -20,9 +20,9 @@ describe('🎧 TRACKS ROUTES', () => {
     });
   });
 
-  it('should get the track with id 1 🧪 /api/tracks/1', async () => {
+  it('should get the track with id 1 🧪 /api/track/1', async () => {
     const res = await supertest(app)
-      .get('/api/tracks/1')
+      .get('/api/track/1')
       .expect(200)
       .expect('Content-Type', /json/);
 
@@ -31,9 +31,9 @@ describe('🎧 TRACKS ROUTES', () => {
     });
   });
 
-  it('should create a new track 🧪 /api/tracks', async () => {
+  it('should create a new track 🧪 /api/track', async () => {
     const res = await supertest(app)
-      .post('/api/tracks')
+      .post('/api/track')
       .send(trackToCreate)
       .expect(201)
       .expect('Content-Type', /json/);
@@ -45,28 +45,28 @@ describe('🎧 TRACKS ROUTES', () => {
     persistentDatas.createdAlbum = res.body;
   });
 
-  it(`should update the created track title 🧪 /api/tracks/`, async () => {
+  it(`should update the created track title 🧪 /api/track/`, async () => {
     await supertest(app)
-      .put(`/api/tracks/${persistentDatas.createdAlbum.id}`)
+      .put(`/api/track/${persistentDatas.createdAlbum.id}`)
       .send({
         title: 'Bohemian Rhapsody',
       })
       .expect(204);
 
     const res = await supertest(app).get(
-      `/api/tracks/${persistentDatas.createdAlbum.id}`
+      `/api/track/${persistentDatas.createdAlbum.id}`
     );
 
     expect(res.body).toHaveProperty('title', 'Bohemian Rhapsody');
   });
 
-  it(`should delete the created album 🧪 /api/tracks/`, async () => {
+  it(`should delete the created album 🧪 /api/track/`, async () => {
     await supertest(app)
-      .delete(`/api/tracks/${persistentDatas.createdAlbum.id}`)
+      .delete(`/api/track/${persistentDatas.createdAlbum.id}`)
       .expect(204);
 
     await supertest(app)
-      .get(`/api/tracks/${persistentDatas.createdAlbum.id}`)
+      .get(`/api/track/${persistentDatas.createdAlbum.id}`)
       .expect(404);
   });
 });

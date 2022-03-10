@@ -6,7 +6,7 @@ const { albumToCreate, albumKeys, trackKeys } = require('./testsData');
 describe('🎧 ALBUMS ROUTES', () => {
   const persistentDatas = {};
 
-  it('should get the albums list 🧪 /api/albums', async () => {
+  it('should get the album list 🧪 /api/album', async () => {
     const res = await supertest(app)
       .get('/api/albums')
       .expect(200)
@@ -37,9 +37,9 @@ describe('🎧 ALBUMS ROUTES', () => {
     });
   });
 
-  it('should get the album with id 1 🧪 /api/albums/1', async () => {
+  it('should get the album with id 1 🧪 /api/album/1', async () => {
     const res = await supertest(app)
-      .get('/api/albums/1')
+      .get('/api/album/1')
       .expect(200)
       .expect('Content-Type', /json/);
 
@@ -48,9 +48,9 @@ describe('🎧 ALBUMS ROUTES', () => {
     });
   });
 
-  it('should create a new album 🧪 /api/albums', async () => {
+  it('should create a new album 🧪 /api/album', async () => {
     const res = await supertest(app)
-      .post('/api/albums')
+      .post('/api/album')
       .send(albumToCreate)
       .expect(201)
       .expect('Content-Type', /json/);
@@ -62,28 +62,28 @@ describe('🎧 ALBUMS ROUTES', () => {
     persistentDatas.createdAlbum = res.body;
   });
 
-  it(`should update the created album title 🧪 /api/albums/`, async () => {
+  it(`should update the created album title 🧪 /api/album/`, async () => {
     await supertest(app)
-      .put(`/api/albums/${persistentDatas.createdAlbum.id}`)
+      .put(`/api/album/${persistentDatas.createdAlbum.id}`)
       .send({
         title: 'The Light Side of the Sun',
       })
       .expect(204);
 
     const res = await supertest(app).get(
-      `/api/albums/${persistentDatas.createdAlbum.id}`
+      `/api/album/${persistentDatas.createdAlbum.id}`
     );
 
     expect(res.body).toHaveProperty('title', 'The Light Side of the Sun');
   });
 
-  it(`should delete the created album 🧪 /api/albums/`, async () => {
+  it(`should delete the created album 🧪 /api/album/`, async () => {
     await supertest(app)
-      .delete(`/api/albums/${persistentDatas.createdAlbum.id}`)
+      .delete(`/api/album/${persistentDatas.createdAlbum.id}`)
       .expect(204);
 
     await supertest(app)
-      .get(`/api/albums/${persistentDatas.createdAlbum.id}`)
+      .get(`/api/album/${persistentDatas.createdAlbum.id}`)
       .expect(404);
   });
 });
