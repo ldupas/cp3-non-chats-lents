@@ -1,0 +1,11 @@
+INSERT INTO `album`(`title`, `youtube_url`, `id_album`)
+VALUES (`La Woman`, `alabama`, `https://www.youtube.com/watch?v=e-N2d5ED2KE`, `1`)
+(`waiting for sun`, `https://www.youtube.com/watch?v=e-N2d5ED2KE`, `2`)
+(`the soft parade`, `https://www.youtube.com/watch?v=e-N2d5ED2KE`, `3`)
+(`Morisson hotel`, `https://www.youtube.com/watch?v=e-N2d5ED2KE`, `4`)
+
+INSERT INTO `track`(`title`, `genre`, `picture`, `artist`)
+VALUES (`Break on Through`, `rock`, `https://m.media-amazon.com/images/I/81dWUePuUsL._SL1433_.jpg`, `The doors`)
+(`Soul Kitchen`, `rock`, `https://m.media-amazon.com/images/I/81dWUePuUsL._SL1433_.jpg`, `The doors`)
+(`Alabama Song`, `rock`, `https://m.media-amazon.com/images/I/81dWUePuUsL._SL1433_.jpg`, `The doors`)
+(`Peace frog`, `rock`, `https://m.media-amazon.com/images/I/81dWUePuUsL._SL1433_.jpg`, `The doors`)
