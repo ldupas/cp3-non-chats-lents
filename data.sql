@@ -2,6 +2,7 @@ CREATE TABLE `track`(
     `id` int NOT NULL AUTO_INCREMENT,
     `title` VARCHAR(128),
     `youtube_url` VARCHAR (255),
+    `id_album` INT NULL,
     PRIMARY KEY (
         `id`
     )

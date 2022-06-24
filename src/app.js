@@ -12,7 +12,7 @@ connection.connect((err) => {
   if (err) {
     console.error('error connecting:' + err.stack);
   } else {
-    console.log('connected as id' + connection.threadID);
+    console.log('connected as id' + connection.threadId);
   }
 });
 
