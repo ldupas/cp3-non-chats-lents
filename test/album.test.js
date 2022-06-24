@@ -30,7 +30,7 @@ describe('🎧 ALBUMS ROUTES', () => {
     expect(Array.isArray(res.body)).toBe(true);
 
     res.body.forEach((track) => {
-      expect(track).toHaveProperty("id_album", 1)
+      expect(track).toHaveProperty('id_album', 1);
       trackKeys.map((prop) => {
         expect(track).toHaveProperty(prop);
       });
